@@ -13,6 +13,26 @@ const App = () => {
   const [email, setEmail] = useState("");
 
   const handleSubmit = (e) => {
+    console.log("submit");
+    console.log(e);
+    console.log(userName);
+
+    const productPayload = {
+      productName: productName,
+      expiryDate: expiryDate
+    }
+
+    const userPayload = {
+      userName: userName,
+      userEmail: email,
+      product: productPayload
+    };
+
+    console.log(userPayload);
+
+    //db.collection('user').add(userPayload);
+
+
     e.preventDefault();
     // You can handle form submission logic here
     console.log("Product Name:", productName);
