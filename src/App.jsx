@@ -1,6 +1,11 @@
 import "./App.css";
 import { useState } from "react";
 
+import walmart from './images/Walmart.png';
+import target from './images/Target_logo.png';
+import patelBrothers from './images/Patel_Brothers.png';
+import costco from './images/Costco.png';
+
 const App = () => {
   const [userName, setUserName] = useState("");
   const [productName, setProductName] = useState("");
@@ -14,12 +19,23 @@ const App = () => {
     console.log("Expiry Date:", expiryDate);
   };
 
+  const stats = [
+    { id: 1, name: "Consume food past expiry date", value: "~40%" },
+    {
+      id: 2,
+      name: "Deaths annually due to foodborne illnesses",
+      value: "420,000",
+    },
+    { id: 3, name: "Food safely consumed than being thrown", value: "68%" },
+  ];
+
   return (
     <>
+      {/* Hero - Landing */}
       <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
         <div className="hidden sm:mb-8 sm:flex sm:justify-center">
           <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-          Stay ahead of expiration dates with our handy notification system.{" "}
+            🚨 Stay ahead of expiration dates with our handy notification system. {" "}
           </div>
         </div>
         <div className="text-center">
@@ -27,7 +43,9 @@ const App = () => {
             Product Alert Assistance using ProQRuct
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-          Users can effortlessly stay ahead of expiring items, we are offering a solution for managing expiration dates by implementing a user-friendly notification system. 
+            Users can effortlessly stay ahead of expiring items, we are offering
+            a solution for managing expiration dates by implementing a
+            user-friendly notification system.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
@@ -52,8 +70,49 @@ const App = () => {
         </div>
       </div>
 
-      <div className="max-w-md mx-auto mb-10 p-6 rounded-md shadow-lg shadow-blue-500/40">
-        <h2 className="text-2xl font-semibold mb-6">Enter product details</h2>
+      {/* Research */}
+      <div className="bg-white py-14 sm:py-32">
+        <div className="text-center">
+          <h3 className="text-4xl font-bold tracking-tight text-indigo-600 sm:text-6xl my-5">
+            Research says that
+          </h3>
+        </div>
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 my-5 py-5">
+          <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+            {stats.map((stat) => (
+              <div
+                key={stat.id}
+                className="mx-auto flex max-w-xs flex-col gap-y-4"
+              >
+                <dt className="text-base leading-7 text-gray-600">
+                  {stat.name}
+                </dt>
+                <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                  {stat.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-2xl py-8 sm:py-12 lg:py-14">
+        <div className="text-center">
+          <h1 className="mt-6 text-2xl font-bold text-black-600">
+            Stay mindful of product details and expiration dates to prevent
+            foodborne illnesses.
+          </h1>
+          <p className="mt-6 text-md leading-8 text-gray-600">
+            This not only safeguards your health but also helps reduce waste. ♻️
+          </p>
+        </div>
+      </div>
+
+      {/* Form */}
+      <div className="max-w-md mx-auto my-5 p-6 rounded-md shadow-lg shadow-blue-500/40">
+        <h2 className="text-center text-2xl font-medium mb-6">
+          Enter product details
+        </h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label
@@ -135,6 +194,45 @@ const App = () => {
             </button>
           </div>
         </form>
+      </div>
+
+      { /* Customers */ }
+      <div className="bg-white py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
+            Our system can help retailers like
+          </h2>
+          <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+            <img
+              className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+              src={walmart}
+              alt="Walmart"
+              width={158}
+              height={48}
+            />
+            <img
+              className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+              src={patelBrothers}
+              alt="Patel Brothers"
+              width={158}
+              height={48}
+            />
+            <img
+              className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
+              src={costco}
+              alt="Costco Wholesale"
+              width={158}
+              height={48}
+            />
+            <img
+              className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+              src={target}
+              alt="Target"
+              width={158}
+              height={48}
+            />
+          </div>
+        </div>
       </div>
     </>
   );
