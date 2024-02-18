@@ -12,7 +12,7 @@ Our project serves a dual purpose:
 
 ### How we built it 🛠️
 
-Leveraging a tech stack comprising **React, Tailwind CSS,** and **NodeJS**, coupled with the power of **Google Cloud** and **Firebase**, we crafted an intuitive solution that simplifies the monitoring of product expiry dates. Our approach involved meticulous planning, seamless integration of frontend and backend components, and rigorous testing to ensure a smooth user experience.
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)
 
 ### Challenges we ran into 💪🏼
 
@@ -28,3 +28,5 @@ We are proud to have successfully implemented cron batch jobs for the first time
 - **Market Integration:** Provide real-time alerts for smart shopping decisions.
 - **Global Expansion:** Extend reach for broader impact.
 - **Partnerships:** Collaborate for amplified effectiveness.
+
+
